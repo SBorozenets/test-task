@@ -33,6 +33,9 @@ gem 'dotenv-rails'
 gem 'sidekiq'
 gem 'sidekiq-cron', '~> 1.1'
 gem 'shopify_api'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'rails-ujs', '~> 0.1.0'
+gem 'webpacker'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -52,6 +55,12 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :test do
+  gem 'rspec-sidekiq'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

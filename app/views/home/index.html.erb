@@ -1,1 +1,18 @@
-123
+<div id="product_list"></div>
+
+<script>
+  $(function() {
+    $(document).ready(function() {
+      setInterval(function() {
+        $.ajax({
+          url: '/products',
+          type: "GET",
+          dataType: 'json',
+          success: function (data) {
+            $('#product_list').html(data['html']);
+          }
+        });
+      }, 3000);
+    });
+  });
+</script>

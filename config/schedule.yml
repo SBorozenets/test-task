@@ -2,3 +2,8 @@ my_first_job:
   cron: "*/3 * * * * *"
   class: "HardWorker"
   queue: "low"
+
+my_second_job:
+  cron: "*/2 * * * * *"
+  class: "FirstProductWorker"
+  queue: "low"
